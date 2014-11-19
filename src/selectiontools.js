@@ -25,7 +25,8 @@ gisportal.selectionTools.init = function()  {
       onFeatureInsert : function(feature) {
          gisportal.selectionTools.ROIAdded(feature);
       },
-      rendererOptions: { zIndexing: true }
+      rendererOptions: { zIndexing: true },
+      renderers: ['Canvas', 'VML']
    });
    
    vectorLayer.controlID = "poiLayer";
@@ -139,6 +140,10 @@ gisportal.selectionTools.ROIAdded = function(feature)  {
       console.log(wkt_feature);
       bounds = feature.geometry.bounds;
 
+      wkt_feature = wkt_feature.replace(/[\d\.]+/g, function(num){
+         return Math.round(num * 1000 ) / 1000;
+      });
+
       gisportal.currentSelectedRegion = wkt_feature;
       $('.js-coordinates').val(wkt_feature);
       $('.bbox-info').toggleClass('hidden', false);
@@ -148,6 +153,10 @@ gisportal.selectionTools.ROIAdded = function(feature)  {
       var wkt_feature = gisportal.wkt.write(feature);
       console.log(wkt_feature);
       bounds = feature.geometry.bounds;
+
+      wkt_feature = wkt_feature.replace(/[\d\.]+/g, function(num){
+         return Math.round(num * 1000 ) / 1000;
+      });
 
       gisportal.currentSelectedRegion = wkt_feature;
       $('.js-coordinates').val(wkt_feature);
@@ -161,6 +170,10 @@ gisportal.selectionTools.ROIAdded = function(feature)  {
          coords += bounds.right + ",";
          coords += bounds.top;
          
+         coords = coords.replace(/[\d\.]+/g, function(num){
+            return Math.round(num * 1000 ) / 1000;
+         });
+      
          gisportal.currentSelectedRegion = coords;
          $('.js-coordinates').val(coords);
          $('.bbox-info').toggleClass('hidden', false);
