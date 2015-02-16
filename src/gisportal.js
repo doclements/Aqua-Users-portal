@@ -91,7 +91,7 @@ gisportal.quickRegion = [
 ];
 
 gisportal.countryBorderLayers = {
-   "none" : { "id" : "0", "name" : "No Borders", "url": ""},
+   "rsg:full_10m_borders": {"id": "rsg:full_10m_borders", "name" : "10M black borders", "url": "https://tiles.maps.eox.at/wms/?"},
    "countries_all_white" : { "id" : "countries_all_white", "name" : "White border lines", "url": "https://rsg.pml.ac.uk/geoserver/wms?"},
    "countries_all_black": { "id" : "countries_all_black", "name" : "Black border lines", "url": "https://rsg.pml.ac.uk/geoserver/wms?"},
    "countries_all_default": { "id" : "countries_all_default", "name" : "Blue border lines", "url": "https://rsg.pml.ac.uk/geoserver/wms?"},
@@ -172,8 +172,8 @@ gisportal.createBaseLayers = function() {
       gisportal.baseLayers[name] = layer;
    }
    
-   createBaseLayer('GEBCO', 'https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?', { layers: 'gebco_08_grid' });
    createBaseLayer('EOX', 'https://tiles.maps.eox.at/wms/?' , {layers : 'terrain-light'});
+   createBaseLayer('GEBCO', 'https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv?', { layers: 'gebco_08_grid' });
    createBaseLayer('Metacarta Basic', 'http://vmap0.tiles.osgeo.org/wms/vmap0?', { layers: 'basic' });
    createBaseLayer('Landsat', 'http://irs.gis-lab.info/?', { layers: 'landsat' });
    createBaseLayer('Blue Marble', 'http://demonstrator.vegaspace.com/wmspub', {layers: "BlueMarble" });
@@ -206,7 +206,6 @@ gisportal.createCountryBorderLayer = function(layerName) {
       layer.controlID = 'country_borders';
       layer.displayTitle = 'Country Borders';
       layer.name = 'country_borders';
-      
       map.addLayer(layer);   
    }
  }
@@ -274,8 +273,8 @@ gisportal.createOpLayers = function() {
       var postfix = "";
       while( gisportal.layers[layer.id + postfix ] !== void(0) )
          postfix++; // will convert the "" into a number
-
-      gisportal.layers[layer.id + postfix] = layer;
+      layer.id = layer.id + postfix
+      gisportal.layers[layer.id] = layer;
 
    };
 
