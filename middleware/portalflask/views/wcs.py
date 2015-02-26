@@ -565,7 +565,12 @@ def basic(dataset, params, irregular=False, original=None):
    timeUnits = getUnits(time)
    start = None
    if timeUnits:
-      start = (netCDF.num2date(times[0], time.units, calendar='standard')).isoformat()
+      current_app.logger.debug("start time = "+str(times[0]))
+      current_app.logger.debug("time units = "+time.units)
+      try:
+         start = (netCDF.num2date(times[0], time.units, calendar='standard')).isoformat()
+      except ValueError:
+         start = ''.join(times[0])
    else: 
       start = ''.join(times[0])
    
@@ -585,7 +590,10 @@ def basic(dataset, params, irregular=False, original=None):
    for i, row in enumerate(maskedArray):
 
       if timeUnits:
-         date = netCDF.num2date(time[i], time.units, calendar='standard').isoformat()
+         try:
+            date = (netCDF.num2date(times[i], time.units, calendar='standard')).isoformat()
+         except ValueError:
+            date = ''.join(times[i])
       else:     
          date = ''.join(times[i])
       mean = getMean(row)
