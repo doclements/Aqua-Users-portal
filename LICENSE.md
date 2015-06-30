@@ -6,10 +6,12 @@ Authors:
 > Robert Beecher-Brigden  
 > Shane Hudson  
 > Ben Calton  
-> Kieran Jones
+> Kieran Jones     
+> Peter Walker     
+> Oliver Clements     
 
-Copyright (c) 2013 PML Applications Ltd  
-http://www.pml-applications.co.uk/
+Copyright (c) 2013 PML Applications Ltd & Plymouth Marine Laboratory
+http://www.pml-applications.co.uk/ http://www.pml.ac.uk
   
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -36,6 +38,8 @@ The following lists below are a work in progress and may not be exhaustive. 23/0
 
 Third-Party Software
 ====================
+
+
 
 OPEC includes or depends upon the following third-party software, either in whole or in part. Each third-party software package is provided under its own license.
 

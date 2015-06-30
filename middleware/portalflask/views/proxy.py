@@ -22,7 +22,7 @@ allowedHosts = ['localhost','localhost:8080','localhost:86','localhost:85',
          'www.gebco.net', 'oos.soest.hawaii.edu:8080', 'oos.soest.hawaii.edu',
          'thredds.met.no','thredds.met.no:8080', 'irs.gis-lab.info',
          'demonstrator.vegaspace.com', 'grid.bodc.nerc.ac.uk', 'ogc.hcmr.gr:8080','wci.earth2observe.eu',
-         'aquausers.dhi-gras.com' ]
+         'aquausers.dhi-gras.com','pmpc1318:8080','vortex4:8080' ]
          
 """
 Standard proxy

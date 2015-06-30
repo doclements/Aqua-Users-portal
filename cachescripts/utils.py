@@ -31,7 +31,8 @@ def updateCaches(createCache, dirtyCaches, serverList, cachePath, masterCachePat
          continue
       
       # Check if cache is valid
-      if not checkCacheValid(cachePath + server['name'] + FILEEXTENSIONXML, cacheLife):        
+      if not checkCacheValid(cachePath + server['name'] + FILEEXTENSIONXML, cacheLife):
+         print '+'*40        
          oldCapabilitiesXML = None
          newCapabilitiesXML = None     
          oldCoverageXML = None
@@ -43,11 +44,14 @@ def updateCaches(createCache, dirtyCaches, serverList, cachePath, masterCachePat
             print 'Getting: ' + url
             resp = urllib2.urlopen(url, timeout=30)
             newCapabilitiesXML = resp.read()
-            
-            url = server['services']['wcs']['url'] + urllib.urlencode(server['services']['wcs']['params']['DescribeCoverage'])
-            print 'Getting: ' + url
-            resp = urllib2.urlopen(url, timeout=30)
-            newCoverageXML = resp.read()
+            print '%'*20
+            print server['services']['wcs']['url']
+            if server['services']['wcs']['url'] is not None:
+               print '#'*20
+               url = server['services']['wcs']['url'] + urllib.urlencode(server['services']['wcs']['params']['DescribeCoverage'])
+               print 'Getting: ' + url
+               resp = urllib2.urlopen(url, timeout=30)
+               newCoverageXML = resp.read()
             
          except urllib2.URLError as e:
             print 'Failed to open url to ' + url
@@ -58,11 +62,12 @@ def updateCaches(createCache, dirtyCaches, serverList, cachePath, masterCachePat
             print e
             
          # Check that we have the xml file
-         if newCapabilitiesXML == None or newCoverageXML == None:
-            dirtyCaches.append(server)
+         if newCapabilitiesXML == None:# or newCoverageXML == None:
+            #dirtyCaches.append(server)
             continue
          
          try:
+            print '-'*40
             oldCapabilitiesXML = getFile(cachePath + server['name'] + '-GetCapabilities' + FILEEXTENSIONXML)
             oldCoverageXML = getFile(cachePath + server['name'] + '-DescribeCoverage' + FILEEXTENSIONXML)
          except IOError as e:
@@ -128,7 +133,7 @@ def regenerateCache(dirtyServer, dirtyCaches, createCache):
             url = dirtyServer['services']['wms']['url'] + urllib.urlencode(dirtyServer['services']['wms']['params']['GetCapabilities'])
             resp = urllib2.urlopen(url, timeout=30)
             newXML = resp.read()
-            createCache(dirtyServer, newXML)
+            createCache(dirtyServer, None,newXML)
             if dirtyServer not in dirtyCaches:
                return
             else:
@@ -192,6 +197,7 @@ def getFile(filepath):
    return data
    
 def saveFile(path, data):
+   #print "in SaveFile trying to get " ,data
    with open(path, 'wb') as file:
       file.write(data)
    
