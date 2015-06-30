@@ -23,7 +23,6 @@
       "src/gritter.js",
       "src/layer.js",
       "src/openid.js",
-      "src/quickRegions.js", 
       "src/timeline.js",
       "src/Plot.js",
       "src/PlotEditor.js",
@@ -34,5 +33,6 @@
       "src/analytics.js",
       "src/user_feedback.js",
       "src/slider.js"
+      "src/ddslick.js"
    ]
 }
