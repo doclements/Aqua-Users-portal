@@ -82,7 +82,7 @@ def createCache(server, capabilitiesXML, coverageXML):
    root = ET.fromstring( removeNonUTF8(capabilitiesXML) )
    
    # Parse the DescribeCoverage XML
-   coverageRoot = ET.fromstring(  removeNonUTF8(coverageXML) )
+   #coverageRoot = ET.fromstring(  removeNonUTF8(coverageXML) )
     
    if root.find('./%sCapability/%sLayer/%sLayer' % (WMS_NAMESPACE,WMS_NAMESPACE,WMS_NAMESPACE)) == None:
       dirtyCaches.append(server)
@@ -114,15 +114,15 @@ def createCache(server, capabilitiesXML, coverageXML):
             #Find the CoverageOffering from DescribeCoverage
             
             
-            coverage = findCoverageNode( coverageRoot, name )
-            if coverage == None:
-               print serverTitle + "  " + name + " could not be found in DescribeCoverage. Not including."
-               continue
+            # coverage = findCoverageNode( coverageRoot, name )
+            # if coverage == None:
+            #    print serverTitle + "  " + name + " could not be found in DescribeCoverage. Not including."
+            #    continue
             
-            offsetVectorsArray = coverage.findall( './/%soffsetVector' % (GML_NAMESPACE) )
-            offsetVectors = []
-            for i in range( 0 , len( offsetVectorsArray )):
-               offsetVectors.append(float(offsetVectorsArray[i].text.split(" ")[i]))
+            #offsetVectorsArray = coverage.findall( './/%soffsetVector' % (GML_NAMESPACE) )
+            #offsetVectors = []
+            #for i in range( 0 , len( offsetVectorsArray )):
+            #   offsetVectors.append(float(offsetVectorsArray[i].text.split(" ")[i]))
             
             exGeographicBoundingBox = {"WestBoundLongitude": layer.find('./%sEX_GeographicBoundingBox/%swestBoundLongitude' % (WMS_NAMESPACE,WMS_NAMESPACE)).text,
                                        "EastBoundLongitude": layer.find('./%sEX_GeographicBoundingBox/%seastBoundLongitude' % (WMS_NAMESPACE,WMS_NAMESPACE)).text,
@@ -168,7 +168,7 @@ def createCache(server, capabilitiesXML, coverageXML):
                               "Abstract": abstract,
                               "FirstDate": dimensions['firstDate'],
                               "LastDate": dimensions['lastDate'],
-                              "OffsetVectors": offsetVectors,
+                              #"OffsetVectors": offsetVectors,
                               "ProviderDetails": providerDetails,
                               "EX_GeographicBoundingBox": exGeographicBoundingBox,
                               "MoreIndicatorInfo" : moreIndicatorInfo,
@@ -188,7 +188,7 @@ def createCache(server, capabilitiesXML, coverageXML):
                         #"Abstract": abstract,
                         "FirstDate": dimensions['firstDate'],
                         "LastDate": dimensions['lastDate'],
-                        "OffsetVectors": offsetVectors,
+                        #"OffsetVectors": offsetVectors,
                         #"EX_GeographicBoundingBox": exGeographicBoundingBox,
                         "BoundingBox": boundingBox,
                         "Dimensions": dimensions['dimensions'],
