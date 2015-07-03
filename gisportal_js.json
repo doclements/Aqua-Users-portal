@@ -32,7 +32,7 @@
       "src/map-settings.js",
       "src/analytics.js",
       "src/user_feedback.js",
-      "src/slider.js"
+      "src/slider.js",
       "src/ddslick.js"
    ]
 }

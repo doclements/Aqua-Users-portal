@@ -12,31 +12,22 @@
 
 gisportal.config = {
    siteMode: "development", //(development|production)
-   browseCategories: {
-      "Ecosystem_Element": "Ecosystem <br> Indicators",
-      "region": "Regional <br> Seas",
-      "MSFD": "EU MSFD <br> Descriptors"
+   browseCategories : {
+      "Ecosystem_Element" : "Ecosystem",
+      "region": "Region",
+      "MSFD" : "EU MSFD"
    },
-   paths: {
-      graphServer: 'http://my-portal-aqua.co.uk:3001',
-      middlewarePath: '/service'
-   },
-   countryBorder: {
-      'defaultLayer': 'rsg:full_10m_borders', // (countries_all_white|countries_all_black|countries_all_blue)
-      'alwaysVisible': true // (true|false)  > If true the defaultLayer will be visible at page load
-   },
-   // Should layers auto scale by default
+   browseMode : 'selectlist',                       // (tabs|selectlist) tabs (default) = original method of 3 tabs; selectlist = makes all available categories selectable from a drop down list
+   defaultCategory: '',                     // only used when browseMode = selectlist; any key value from browseCategories
    autoScale: true,
-
-   requiresTermsAndCondictions: false,
-
-   homepageSlides: [
-      "img/homepage-slides/opec1.jpg",
-      "img/homepage-slides/opec2.jpg",
-      "img/homepage-slides/opec3.jpg",
-      "img/homepage-slides/opec4.jpg",
-      "img/homepage-slides/opec5.jpg",
-      "img/homepage-slides/opec6.jpg",
-      "img/homepage-slides/opec7.jpg"
-   ]
+   paths: {
+    graphServer: 'http://portaldev.aqua-users.eu/plotting',
+    middlewarePath: '/service'
+   },
+   popularIndicators : [
+      "Heterotrophic flagellates biomass", "Net Primary Production", "Oxygen", "Temperature"
+   ],
+   defaultStates: [
+     
+   ],
 };
