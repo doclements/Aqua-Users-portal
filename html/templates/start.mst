@@ -1,9 +1,9 @@
 <div class="start-container overlay-container">
    <div class="intro-text">
-   <p>The Marine Operation Ecology data portal provides model simulated ecosystem data for
-    European Regional Seas.</p>
-    <p>More information on OPEC is available on the project web site,
-    <a href="http://marineopec.eu" target="_blank">http://marineopec.eu</a></p>
+   <p>The AquaUSERS data portal provides access to remote sensed data for
+    European Regional Seas relevant to aquaculture in Europe.</p>
+    <p>More information on AquaUSERS is available on the project web site,
+    <a href="http://aqua-users.eu" target="_blank">http://aqua-users.eu</a></p>
    </div>
    <div class="homepageSlider">
       <div class="homepageSlider-wrap">
