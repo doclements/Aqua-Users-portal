@@ -1,5 +1,44 @@
 layers = [
-   {
+{
+    "name": "socio_test:south_west_wgs84",
+      "options": {
+         "providerShortTag": "PML"
+      },
+      "services": {
+         "wms": {
+            "url": "http://localhost:8080/geoserver/socio_test/wms?",
+            "params": {
+               "GetCapabilities": {
+                  "SERVICE": "WMS",
+                  "request": "GetCapabilities",
+                  "version": "1.3.0"
+               }
+            }
+         },
+         "wcs": {
+            "url": "https://vortices.npm.ac.uk/thredds/wcs/SST_RRC_8D?",
+            "params": {
+               "DescribeCoverage": {
+                  "SERVICE": "WCS",
+                  "request": "describeCoverage",
+                  "version": "1.0.0"
+               }
+            }
+         }
+      },
+      "indicators": {
+         "socio_test:south_west_wgs84": {
+          "Confidence": "High",
+            "Ecosystem_Element": "Scoio",
+            "MSFD": [
+               ""
+            ],
+            "interval": "",
+            "niceName": "Social Deprivatin index",
+            "region": "Cornwall"
+         }
+      }
+   },{
       "name": "sstp",
       "options": {
          "providerShortTag": "PML"
