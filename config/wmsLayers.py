@@ -761,5 +761,45 @@ layers = [
             "region": "Denmark"
          }
       }
+   },
+     {
+      "name": "pseudo_cornwall_monthly",
+      "options": {
+         "providerShortTag": "PML"
+      },
+      "services": {
+         "wms": {
+            "url": "http://localhost:8080/thredds/wms/HAB_MONTHLY_C_pseudo?",
+            "params": {
+               "GetCapabilities": {
+                  "SERVICE": "WMS",
+                  "request": "GetCapabilities",
+                  "version": "1.3.0"
+               }
+            }
+         },
+         "wcs": {
+            "url": "http://localhost:8080/thredds/wcs/HAB_MONTHLY_C_pseudo?",
+            "params": {
+               "DescribeCoverage": {
+                  "SERVICE": "WCS",
+                  "request": "describeCoverage",
+                  "version": "1.0.0"
+               }
+            }
+         }
+      },
+      "indicators": {
+         "harmful_un": {
+          "Confidence": "High",
+            "Ecosystem_Element": "Harmful Algal Bloom",
+            "MSFD": [
+               "KD"
+            ],
+            "interval": "Mnthly",
+            "niceName": "Monthly HAB risk (pseudo) Cornwall",
+            "region": "Cornwall"
+         }
+      }
    }
 ]
