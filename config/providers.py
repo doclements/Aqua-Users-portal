@@ -8,5 +8,12 @@ providers ={
    "logo": 'img/providers/dhi.png',
    "website": "http://dhi-gras.com/",
    "email": "TODO"
+  },
+  
+  "NEODAAS" : {
+   "logo": 'img/providers/dhi.png',
+   "website": "http://dhi-gras.com/",
+   "email": "TODO"
   }
+  
 }

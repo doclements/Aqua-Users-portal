@@ -1,44 +1,5 @@
 layers = [
 {
-    "name": "socio_test:south_west_wgs84",
-      "options": {
-         "providerShortTag": "PML"
-      },
-      "services": {
-         "wms": {
-            "url": "http://localhost:8080/geoserver/socio_test/wms?",
-            "params": {
-               "GetCapabilities": {
-                  "SERVICE": "WMS",
-                  "request": "GetCapabilities",
-                  "version": "1.3.0"
-               }
-            }
-         },
-         "wcs": {
-            "url": "https://vortices.npm.ac.uk/thredds/wcs/SST_RRC_8D?",
-            "params": {
-               "DescribeCoverage": {
-                  "SERVICE": "WCS",
-                  "request": "describeCoverage",
-                  "version": "1.0.0"
-               }
-            }
-         }
-      },
-      "indicators": {
-         "socio_test:south_west_wgs84": {
-          "Confidence": "High",
-            "Ecosystem_Element": "Scoio",
-            "MSFD": [
-               ""
-            ],
-            "interval": "",
-            "niceName": "Social Deprivatin index",
-            "region": "Cornwall"
-         }
-      }
-   },{
       "name": "sstp",
       "options": {
          "providerShortTag": "PML"
@@ -769,7 +730,7 @@ layers = [
       },
       "services": {
          "wms": {
-            "url": "http://localhost:8080/thredds/wms/HAB_MONTHLY_C_pseudo?",
+            "url": "https://vortices.npm.ac.uk/thredds/wms/HAB_MONTHLY_C_pseudo?",
             "params": {
                "GetCapabilities": {
                   "SERVICE": "WMS",
@@ -779,7 +740,7 @@ layers = [
             }
          },
          "wcs": {
-            "url": "http://localhost:8080/thredds/wcs/HAB_MONTHLY_C_pseudo?",
+            "url": "https://vortices.npm.ac.uk/thredds/wcs/HAB_MONTHLY_C_pseudo?",
             "params": {
                "DescribeCoverage": {
                   "SERVICE": "WCS",
@@ -794,12 +755,676 @@ layers = [
           "Confidence": "High",
             "Ecosystem_Element": "Harmful Algal Bloom",
             "MSFD": [
-               "KD"
+           
             ],
-            "interval": "Mnthly",
-            "niceName": "Monthly HAB risk (pseudo) Cornwall",
+            "interval": "Monthly",
+            "niceName": "Monthly HAB risk (pseudo nitzschia) Cornwall",
             "region": "Cornwall"
          }
       }
+   },{
+      "name": "pseudo_cornwall_weekly",
+      "options": {
+         "providerShortTag": "PML"
+      },
+      "services": {
+         "wms": {
+            "url": "https://vortices.npm.ac.uk/thredds/wms/HAB_WEEKLY_C_pseudo?",
+            "params": {
+               "GetCapabilities": {
+                  "SERVICE": "WMS",
+                  "request": "GetCapabilities",
+                  "version": "1.3.0"
+               }
+            }
+         },
+         "wcs": {
+            "url": "https://vortices.npm.ac.uk/thredds/wcs/HAB_WEEKLY_C_pseudo?",
+            "params": {
+               "DescribeCoverage": {
+                  "SERVICE": "WCS",
+                  "request": "describeCoverage",
+                  "version": "1.0.0"
+               }
+            }
+         }
+      },
+      "indicators": {
+         "harmful_un": {
+          "Confidence": "High",
+            "Ecosystem_Element": "Harmful Algal Bloom",
+            "MSFD": [
+             
+            ],
+            "interval": "Weekly",
+            "niceName": "Weekly HAB risk (pseudo nitzschia) Cornwall",
+            "region": "Cornwall"
+         }
+      }
+   },{
+      "name": "pseudo_norway_weekly",
+      "options": {
+         "providerShortTag": "PML"
+      },
+      "services": {
+         "wms": {
+            "url": "https://vortices.npm.ac.uk/thredds/wms/HAB_WEEKLY_NO_pseudo?",
+            "params": {
+               "GetCapabilities": {
+                  "SERVICE": "WMS",
+                  "request": "GetCapabilities",
+                  "version": "1.3.0"
+               }
+            }
+         },
+         "wcs": {
+            "url": "https://vortices.npm.ac.uk/thredds/wcs/HAB_WEEKLY_NO_pseudo?",
+            "params": {
+               "DescribeCoverage": {
+                  "SERVICE": "WCS",
+                  "request": "describeCoverage",
+                  "version": "1.0.0"
+               }
+            }
+         }
+      },
+      "indicators": {
+         "harmful_un": {
+          "Confidence": "High",
+            "Ecosystem_Element": "Harmful Algal Bloom",
+            "MSFD": [
+            
+            ],
+            "interval": "Weekly",
+            "niceName": "Weekly HAB risk (pseudo nitzschia) Norway",
+            "region": "Norway"
+         }
+      }
+   },{
+      "name": "pseudo_norway_monthly",
+      "options": {
+         "providerShortTag": "PML"
+      },
+      "services": {
+         "wms": {
+            "url": "https://vortices.npm.ac.uk/thredds/wms/HAB_MONTHLY_NO_pseudo?",
+            "params": {
+               "GetCapabilities": {
+                  "SERVICE": "WMS",
+                  "request": "GetCapabilities",
+                  "version": "1.3.0"
+               }
+            }
+         },
+         "wcs": {
+            "url": "https://vortices.npm.ac.uk/thredds/wcs/HAB_MONTHLY_NO_pseudo?",
+            "params": {
+               "DescribeCoverage": {
+                  "SERVICE": "WCS",
+                  "request": "describeCoverage",
+                  "version": "1.0.0"
+               }
+            }
+         }
+      },
+      "indicators": {
+         "harmful_un": {
+          "Confidence": "High",
+            "Ecosystem_Element": "Harmful Algal Bloom",
+            "MSFD": [
+            
+            ],
+            "interval": "Monthly",
+            "niceName": "Monthly HAB risk (pseudo nitzschia) Norway",
+            "region": "Norway"
+         }
+      }
+   },{
+      "name": "pseudochattonella_denmark_weekly",
+      "options": {
+         "providerShortTag": "PML"
+      },
+      "services": {
+         "wms": {
+            "url": "https://vortices.npm.ac.uk/thredds/wms/HAB_WEEKLY_DE_pseudochattonella?",
+            "params": {
+               "GetCapabilities": {
+                  "SERVICE": "WMS",
+                  "request": "GetCapabilities",
+                  "version": "1.3.0"
+               }
+            }
+         },
+         "wcs": {
+            "url": "https://vortices.npm.ac.uk/thredds/wcs/HAB_WEEKLY_DE_pseudochattonella?",
+            "params": {
+               "DescribeCoverage": {
+                  "SERVICE": "WCS",
+                  "request": "describeCoverage",
+                  "version": "1.0.0"
+               }
+            }
+         }
+      },
+      "indicators": {
+         "harmful_un": {
+          "Confidence": "High",
+            "Ecosystem_Element": "Harmful Algal Bloom",
+            "MSFD": [
+            
+            ],
+            "interval": "Weekly",
+            "niceName": "Weekly HAB risk (pseudochattonella) Denmark",
+            "region": "Denmark"
+         }
+      }
+   },{
+      "name": "pseudochattonella_denmark_monthly",
+      "options": {
+         "providerShortTag": "PML"
+      },
+      "services": {
+         "wms": {
+            "url": "https://vortices.npm.ac.uk/thredds/wms/HAB_MONTHLY_DE_pseudochattonella?",
+            "params": {
+               "GetCapabilities": {
+                  "SERVICE": "WMS",
+                  "request": "GetCapabilities",
+                  "version": "1.3.0"
+               }
+            }
+         },
+         "wcs": {
+            "url": "https://vortices.npm.ac.uk/thredds/wcs/HAB_MONTHLY_DE_pseudochattonella?",
+            "params": {
+               "DescribeCoverage": {
+                  "SERVICE": "WCS",
+                  "request": "describeCoverage",
+                  "version": "1.0.0"
+               }
+            }
+         }
+      },
+      "indicators": {
+         "harmful_un": {
+          "Confidence": "High",
+            "Ecosystem_Element": "Harmful Algal Bloom",
+            "MSFD": [
+            
+            ],
+            "interval": "Monthly",
+            "niceName": "Monthly HAB risk (pseudochattonella) Denmark",
+            "region": "Denmark"
+         }
+      }
+   },{
+      "name": "phaeo_netherlands_weekly",
+      "options": {
+         "providerShortTag": "PML"
+      },
+      "services": {
+         "wms": {
+            "url": "https://vortices.npm.ac.uk/thredds/wms/HAB_WEEKLY_NL_phaeo?",
+            "params": {
+               "GetCapabilities": {
+                  "SERVICE": "WMS",
+                  "request": "GetCapabilities",
+                  "version": "1.3.0"
+               }
+            }
+         },
+         "wcs": {
+            "url": "https://vortices.npm.ac.uk/thredds/wcs/HAB_WEEKLY_NL_phaeo?",
+            "params": {
+               "DescribeCoverage": {
+                  "SERVICE": "WCS",
+                  "request": "describeCoverage",
+                  "version": "1.0.0"
+               }
+            }
+         }
+      },
+      "indicators": {
+         "harmful_un": {
+          "Confidence": "High",
+            "Ecosystem_Element": "Harmful Algal Bloom",
+            "MSFD": [
+            
+            ],
+            "interval": "Weekly",
+            "niceName": "Weekly HAB risk (phaeo) Netherlands",
+            "region": "Netherlands"
+         }
+      }
+   },{
+      "name": "phaeo_netherlands_monthly",
+      "options": {
+         "providerShortTag": "PML"
+      },
+      "services": {
+         "wms": {
+            "url": "https://vortices.npm.ac.uk/thredds/wms/HAB_MONTHLY_NL_phaeo?",
+            "params": {
+               "GetCapabilities": {
+                  "SERVICE": "WMS",
+                  "request": "GetCapabilities",
+                  "version": "1.3.0"
+               }
+            }
+         },
+         "wcs": {
+            "url": "https://vortices.npm.ac.uk/thredds/wcs/HAB_MONTHLY_NL_phaeo?",
+            "params": {
+               "DescribeCoverage": {
+                  "SERVICE": "WCS",
+                  "request": "describeCoverage",
+                  "version": "1.0.0"
+               }
+            }
+         }
+      },
+      "indicators": {
+         "harmful_un": {
+          "Confidence": "High",
+            "Ecosystem_Element": "Harmful Algal Bloom",
+            "MSFD": [
+            
+            ],
+            "interval": "Monthly",
+            "niceName": "Monthly HAB risk (phaeo) Netherlands",
+            "region": "Netherlands"
+         }
+      }
+   },{
+      "name": "dacyliosolen_norway_weekly",
+      "options": {
+         "providerShortTag": "PML"
+      },
+      "services": {
+         "wms": {
+            "url": "https://vortices.npm.ac.uk/thredds/wms/HAB_WEEKLY_NO_dacyliosolen?",
+            "params": {
+               "GetCapabilities": {
+                  "SERVICE": "WMS",
+                  "request": "GetCapabilities",
+                  "version": "1.3.0"
+               }
+            }
+         },
+         "wcs": {
+            "url": "https://vortices.npm.ac.uk/thredds/wcs/HAB_WEEKLY_NO_dacyliosolen?",
+            "params": {
+               "DescribeCoverage": {
+                  "SERVICE": "WCS",
+                  "request": "describeCoverage",
+                  "version": "1.0.0"
+               }
+            }
+         }
+      },
+      "indicators": {
+         "harmful_un": {
+          "Confidence": "High",
+            "Ecosystem_Element": "Harmful Algal Bloom",
+            "MSFD": [
+            
+            ],
+            "interval": "Weekly",
+            "niceName": "Weekly HAB risk (dacyliosolen) Norway",
+            "region": "Norway"
+         }
+      }
+   },{
+      "name": "dacyliosolen_norway_monthly",
+      "options": {
+         "providerShortTag": "PML"
+      },
+      "services": {
+         "wms": {
+            "url": "https://vortices.npm.ac.uk/thredds/wms/HAB_MONTHLY_NO_dacyliosolen?",
+            "params": {
+               "GetCapabilities": {
+                  "SERVICE": "WMS",
+                  "request": "GetCapabilities",
+                  "version": "1.3.0"
+               }
+            }
+         },
+         "wcs": {
+            "url": "https://vortices.npm.ac.uk/thredds/wcs/HAB_MONTHLY_NO_dacyliosolen?",
+            "params": {
+               "DescribeCoverage": {
+                  "SERVICE": "WCS",
+                  "request": "describeCoverage",
+                  "version": "1.0.0"
+               }
+            }
+         }
+      },
+      "indicators": {
+         "harmful_un": {
+          "Confidence": "High",
+            "Ecosystem_Element": "Harmful Algal Bloom",
+            "MSFD": [
+            
+            ],
+            "interval": "Monthly",
+            "niceName": "Monthly HAB risk (dacyliosolen) Norway",
+            "region": "Norway"
+         }
+      }
+   },{
+      "name": "noctiluca_west_portugal_monthly",
+      "options": {
+         "providerShortTag": "PML"
+      },
+      "services": {
+         "wms": {
+            "url": "https://vortices.npm.ac.uk/thredds/wms/HAB_MONTHLY_RRI_noctiluca?",
+            "params": {
+               "GetCapabilities": {
+                  "SERVICE": "WMS",
+                  "request": "GetCapabilities",
+                  "version": "1.3.0"
+               }
+            }
+         },
+         "wcs": {
+            "url": "https://vortices.npm.ac.uk/thredds/wcs/HAB_MONTHLY_RRI_noctiluca?",
+            "params": {
+               "DescribeCoverage": {
+                  "SERVICE": "WCS",
+                  "request": "describeCoverage",
+                  "version": "1.0.0"
+               }
+            }
+         }
+      },
+      "indicators": {
+         "harmful_un": {
+          "Confidence": "High",
+            "Ecosystem_Element": "Harmful Algal Bloom",
+            "MSFD": [
+            
+            ],
+            "interval": "Monthly",
+            "niceName": "Monthly HAB risk (noctiluca) Western Portugal",
+            "region": "Portugal"
+         }
+      }
+   },{
+      "name": "noctiluca_west_portugal_weekly",
+      "options": {
+         "providerShortTag": "PML"
+      },
+      "services": {
+         "wms": {
+            "url": "https://vortices.npm.ac.uk/thredds/wms/HAB_WEEKLY_RRI_noctiluca?",
+            "params": {
+               "GetCapabilities": {
+                  "SERVICE": "WMS",
+                  "request": "GetCapabilities",
+                  "version": "1.3.0"
+               }
+            }
+         },
+         "wcs": {
+            "url": "https://vortices.npm.ac.uk/thredds/wcs/HAB_WEEKLY_RRI_noctiluca?",
+            "params": {
+               "DescribeCoverage": {
+                  "SERVICE": "WCS",
+                  "request": "describeCoverage",
+                  "version": "1.0.0"
+               }
+            }
+         }
+      },
+      "indicators": {
+         "harmful_un": {
+          "Confidence": "High",
+            "Ecosystem_Element": "Harmful Algal Bloom",
+            "MSFD": [
+            
+            ],
+            "interval": "Weekly",
+            "niceName": "Weekly HAB risk (noctiluca) Western Portugal",
+            "region": "Portugal"
+         }
+      }
+   },{
+      "name": "karenia_scotland_weekly",
+      "options": {
+         "providerShortTag": "PML"
+      },
+      "services": {
+         "wms": {
+            "url": "https://vortices.npm.ac.uk/thredds/wms/HAB_WEEKLY_S_karenia?",
+            "params": {
+               "GetCapabilities": {
+                  "SERVICE": "WMS",
+                  "request": "GetCapabilities",
+                  "version": "1.3.0"
+               }
+            }
+         },
+         "wcs": {
+            "url": "https://vortices.npm.ac.uk/thredds/wcs/HAB_WEEKLY_S_karenia?",
+            "params": {
+               "DescribeCoverage": {
+                  "SERVICE": "WCS",
+                  "request": "describeCoverage",
+                  "version": "1.0.0"
+               }
+            }
+         }
+      },
+      "indicators": {
+         "harmful_un": {
+          "Confidence": "High",
+            "Ecosystem_Element": "Harmful Algal Bloom",
+            "MSFD": [
+            
+            ],
+            "interval": "Weekly",
+            "niceName": "Weekly HAB risk (karenia) Scotland",
+            "region": "Scotland"
+         }
+      }
+   },{
+      "name": "karenia_scotland_monthly",
+      "options": {
+         "providerShortTag": "PML"
+      },
+      "services": {
+         "wms": {
+            "url": "https://vortices.npm.ac.uk/thredds/wms/HAB_MONTHLY_S_karenia?",
+            "params": {
+               "GetCapabilities": {
+                  "SERVICE": "WMS",
+                  "request": "GetCapabilities",
+                  "version": "1.3.0"
+               }
+            }
+         },
+         "wcs": {
+            "url": "https://vortices.npm.ac.uk/thredds/wcs/HAB_MONTHLY_S_karenia?",
+            "params": {
+               "DescribeCoverage": {
+                  "SERVICE": "WCS",
+                  "request": "describeCoverage",
+                  "version": "1.0.0"
+               }
+            }
+         }
+      },
+      "indicators": {
+         "harmful_un": {
+          "Confidence": "High",
+            "Ecosystem_Element": "Harmful Algal Bloom",
+            "MSFD": [
+            
+            ],
+            "interval": "Monthly",
+            "niceName": "Monthly HAB risk (karenia) Scotland",
+            "region": "Scotland"
+         }
+      }
+   },{
+      "name": "karenia_cornwall_weekly",
+      "options": {
+         "providerShortTag": "PML"
+      },
+      "services": {
+         "wms": {
+            "url": "https://vortices.npm.ac.uk/thredds/wms/HAB_WEEKLY_C_karenia?",
+            "params": {
+               "GetCapabilities": {
+                  "SERVICE": "WMS",
+                  "request": "GetCapabilities",
+                  "version": "1.3.0"
+               }
+            }
+         },
+         "wcs": {
+            "url": "https://vortices.npm.ac.uk/thredds/wcs/HAB_WEEKLY_C_karenia?",
+            "params": {
+               "DescribeCoverage": {
+                  "SERVICE": "WCS",
+                  "request": "describeCoverage",
+                  "version": "1.0.0"
+               }
+            }
+         }
+      },
+      "indicators": {
+         "harmful_un": {
+          "Confidence": "High",
+            "Ecosystem_Element": "Harmful Algal Bloom",
+            "MSFD": [
+            
+            ],
+            "interval": "Weekly",
+            "niceName": "Weekly HAB risk (karenia) Cornwall",
+            "region": "Cornwall"
+         }
+      }
+   },{
+      "name": "karenia_cornwall_monthly",
+      "options": {
+         "providerShortTag": "PML"
+      },
+      "services": {
+         "wms": {
+            "url": "https://vortices.npm.ac.uk/thredds/wms/HAB_MONTHLY_C_karenia?",
+            "params": {
+               "GetCapabilities": {
+                  "SERVICE": "WMS",
+                  "request": "GetCapabilities",
+                  "version": "1.3.0"
+               }
+            }
+         },
+         "wcs": {
+            "url": "https://vortices.npm.ac.uk/thredds/wcs/HAB_MONTHLY_C_karenia?",
+            "params": {
+               "DescribeCoverage": {
+                  "SERVICE": "WCS",
+                  "request": "describeCoverage",
+                  "version": "1.0.0"
+               }
+            }
+         }
+      },
+      "indicators": {
+         "harmful_un": {
+          "Confidence": "High",
+            "Ecosystem_Element": "Harmful Algal Bloom",
+            "MSFD": [
+            
+            ],
+            "interval": "Monthly",
+            "niceName": "Monthly HAB risk (karenia) Cornwall",
+            "region": "Cornwall"
+         }
+      }
+   },{
+      "name": "linguldinium_algarve_monthly",
+      "options": {
+         "providerShortTag": "PML"
+      },
+      "services": {
+         "wms": {
+            "url": "https://vortices.npm.ac.uk/thredds/wms/HAB_MONTHLY_A_lingulodinium?",
+            "params": {
+               "GetCapabilities": {
+                  "SERVICE": "WMS",
+                  "request": "GetCapabilities",
+                  "version": "1.3.0"
+               }
+            }
+         },
+         "wcs": {
+            "url": "https://vortices.npm.ac.uk/thredds/wcs/HAB_MONTHLY_A_lingulodinium?",
+            "params": {
+               "DescribeCoverage": {
+                  "SERVICE": "WCS",
+                  "request": "describeCoverage",
+                  "version": "1.0.0"
+               }
+            }
+         }
+      },
+      "indicators": {
+         "harmful_un": {
+          "Confidence": "High",
+            "Ecosystem_Element": "Harmful Algal Bloom",
+            "MSFD": [
+            
+            ],
+            "interval": "Monthly",
+            "niceName": "Monthly HAB risk (linguldinium) Algarve",
+            "region": "Algarve"
+         }
+      }
+   },{
+      "name": "linguldinium_algarve_weekly",
+      "options": {
+         "providerShortTag": "PML"
+      },
+      "services": {
+         "wms": {
+            "url": "https://vortices.npm.ac.uk/thredds/wms/HAB_WEEKLY_A_lingulodinium?",
+            "params": {
+               "GetCapabilities": {
+                  "SERVICE": "WMS",
+                  "request": "GetCapabilities",
+                  "version": "1.3.0"
+               }
+            }
+         },
+         "wcs": {
+            "url": "https://vortices.npm.ac.uk/thredds/wcs/HAB_WEEKLY_A_lingulodinium?",
+            "params": {
+               "DescribeCoverage": {
+                  "SERVICE": "WCS",
+                  "request": "describeCoverage",
+                  "version": "1.0.0"
+               }
+            }
+         }
+      },
+      "indicators": {
+         "harmful_un": {
+          "Confidence": "High",
+            "Ecosystem_Element": "Harmful Algal Bloom",
+            "MSFD": [
+            
+            ],
+            "interval": "Weekly",
+            "niceName": "Weekly HAB risk (linguldinium) Algarve",
+            "region": "Algarve"
+         }
+      }
    }
+
 ]

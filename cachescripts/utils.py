@@ -42,7 +42,7 @@ def updateCaches(createCache, dirtyCaches, serverList, cachePath, masterCachePat
          try:
             url = server['services']['wms']['url'] + urllib.urlencode(server['services']['wms']['params']['GetCapabilities'])
             print 'Getting: ' + url
-            resp = urllib2.urlopen(url, timeout=30)
+            resp = urllib2.urlopen(url, timeout=300)
             newCapabilitiesXML = resp.read()
             print '%'*20
             print server['services']['wcs']['url']
@@ -50,7 +50,7 @@ def updateCaches(createCache, dirtyCaches, serverList, cachePath, masterCachePat
                print '#'*20
                url = server['services']['wcs']['url'] + urllib.urlencode(server['services']['wcs']['params']['DescribeCoverage'])
                print 'Getting: ' + url
-               resp = urllib2.urlopen(url, timeout=30)
+               resp = urllib2.urlopen(url, timeout=300)
                newCoverageXML = resp.read()
             
          except urllib2.URLError as e:
