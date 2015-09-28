@@ -673,7 +673,7 @@ layers = [
       "indicators": {
          "analysed_sst": {
           "Confidence": "High",
-            "Ecosystem_Element": "Ocean Colour",
+            "Ecosystem_Element": "Physical",
             "MSFD": [
                "Temperature"
             ],
