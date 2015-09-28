@@ -1,0 +1,4 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} ^/plotting/.*
+RewriteRule plotting/(.*) http://localhost:8001/$1 [P]

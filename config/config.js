@@ -21,7 +21,7 @@ gisportal.config = {
    defaultCategory: '',                     // only used when browseMode = selectlist; any key value from browseCategories
    autoScale: true,
    paths: {
-    graphServer: 'http://portaldev.aqua-users.eu/plotting',
+    graphServer: '/plotting',
     middlewarePath: '/service'
    },
    popularIndicators : [
