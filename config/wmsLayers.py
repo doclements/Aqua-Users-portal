@@ -349,7 +349,7 @@ layers = [
       "indicators": {
          "adg_443_qaa": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -359,7 +359,7 @@ layers = [
          },
          "chl_oc5": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -369,7 +369,7 @@ layers = [
          },
          "chlor_a": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -379,7 +379,7 @@ layers = [
          },
          "Kd_490": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -389,7 +389,7 @@ layers = [
          },
          "spmi": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -430,7 +430,7 @@ layers = [
       "indicators": {
          "adg_443_qaa": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -440,7 +440,7 @@ layers = [
          },
          "chl_oc5": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -450,7 +450,7 @@ layers = [
          },
          "chlor_a": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -460,7 +460,7 @@ layers = [
          },
          "Kd_490": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -470,7 +470,7 @@ layers = [
          },
          "spmi": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -511,7 +511,7 @@ layers = [
       "indicators": {
          "adg_443_qaa": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -521,7 +521,7 @@ layers = [
          },
          "chl_oc5": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -531,7 +531,7 @@ layers = [
          },
          "chlor_a": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -541,7 +541,7 @@ layers = [
          },
          "Kd_490": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -551,7 +551,7 @@ layers = [
          },
          "spmi": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -592,7 +592,7 @@ layers = [
       "indicators": {
          "adg_443_qaa": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -602,7 +602,7 @@ layers = [
          },
          "chl_oc5": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -612,7 +612,7 @@ layers = [
          },
          "chlor_a": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -622,7 +622,7 @@ layers = [
          },
          "Kd_490": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -632,7 +632,7 @@ layers = [
          },
          "spmi": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -673,7 +673,7 @@ layers = [
       "indicators": {
          "analysed_sst": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "Temperature"
             ],
@@ -713,7 +713,7 @@ layers = [
       "indicators": {
          "Kd_490": {
           "Confidence": "High",
-            "Ecosystem_Element": "Physical",
+            "Ecosystem_Element": "Ocean Colour",
             "MSFD": [
                "KD"
             ],
