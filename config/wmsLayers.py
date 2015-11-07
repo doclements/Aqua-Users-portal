@@ -1425,6 +1425,378 @@ layers = [
             "region": "Algarve"
          }
       }
-   }
+   },
+    {
+        "indicators": {
+            
+            "nitrate": {
+                "Confidence": "Medium", 
+                "Ecosystem_Element": "Nutrient", 
+                "MSFD": [
+                    "Eutrophication", 
+                    "Biological Diversity"
+                ], 
+                "contact": "Kostas Tsiaras", 
+                "interval": "Monthly", 
+                "model": "POM-ERSEM", 
+                "niceName": "Nitrate", 
+                "region": "Mediterranean Sea"
+            }, 
+            "phosphate": {
+                "Confidence": "Medium", 
+                "Ecosystem_Element": "Nutrient", 
+                "MSFD": [
+                    "Eutrophication", 
+                    "Biological Diversity"
+                ], 
+                "contact": "Kostas Tsiaras", 
+                "interval": "Monthly", 
+                "model": "POM-ERSEM", 
+                "niceName": "Phosphate", 
+                "region": "Mediterranean Sea"
+            }, 
+            "silicate": {
+                "Confidence": "Medium", 
+                "Ecosystem_Element": "Nutrient", 
+                "MSFD": [
+                    "Eutrophication", 
+                    "Biological Diversity"
+                ], 
+                "contact": "Kostas Tsiaras", 
+                "interval": "Monthly", 
+                "model": "POM-ERSEM", 
+                "niceName": "Silicate", 
+                "region": "Mediterranean Sea"
+            }
+        }, 
+        "name": "hcmr", 
+        "options": {
+            "positive": "up", 
+            "providerShortTag": "HCMR"
+        }, 
+        "services": {
+            "wcs": {
+                "params": {
+                    "DescribeCoverage": {
+                        "SERVICE": "WCS", 
+                        "request": "describeCoverage", 
+                        "version": "1.0.0"
+                    }
+                }, 
+                "url": "http://ogc.hcmr.gr:8080/thredds/wcs/POMERSEM_MED_MONTHLY?"
+            }, 
+            "wms": {
+                "params": {
+                    "GetCapabilities": {
+                        "SERVICE": "WMS", 
+                        "request": "GetCapabilities", 
+                        "version": "1.3.0"
+                    }
+                }, 
+                "url": "http://ogc.hcmr.gr:8080/thredds/wms/POMERSEM_MED_MONTHLY?"
+            }
+        }
+    },             
+    {
+        "indicators": {
+             "DIN": {
+                "Confidence": "High", 
+                "Ecosystem_Element": "Nutrient", 
+                "MSFD": [
+                    "Eutrophication", 
+                    "Biological Diversity", 
+                    "Foodwebs"
+                ], 
+                "contact": "Zhenwen Wan", 
+                "interval": "Monthly", 
+                "model": "HBM-ERGOM", 
+                "niceName": "Nitrate", 
+                "region": "Baltic Sea"
+            }, 
+            "DIP": {
+                "Confidence": "High", 
+                "Ecosystem_Element": "Nutrient", 
+                "MSFD": [
+                    "Eutrophication", 
+                    "Biological Diversity", 
+                    "Foodwebs"
+                ], 
+                "contact": "Zhenwen Wan", 
+                "interval": "Monthly", 
+                "model": "HBM-ERGOM", 
+                "niceName": "Phosphate", 
+                "region": "Baltic Sea"
+            }
+        }, 
+        "name": "dmi", 
+        "options": {
+            "positive": "up", 
+            "providerShortTag": "DMI"
+        }, 
+        "services": {
+            "wcs": {
+                "params": {
+                    "DescribeCoverage": {
+                        "SERVICE": "WCS", 
+                        "request": "describeCoverage", 
+                        "version": "1.0.0"
+                    }
+                }, 
+                "url": "https://rsg.pml.ac.uk/thredds/wcs/DMI_GEN?"
+            }, 
+            "wms": {
+                "params": {
+                    "GetCapabilities": {
+                        "SERVICE": "WMS", 
+                        "request": "GetCapabilities", 
+                        "version": "1.3.0"
+                    }
+                }, 
+                "url": "https://rsg.pml.ac.uk/thredds/wms/DMI_GEN?"
+            }
+        }
+    }, 
+    {
+        "indicators": {
+            "DIN": {
+                "Confidence": "Medium", 
+                "Ecosystem_Element": "Nutrient", 
+                "MSFD": [
+                    "Eutrophication"
+                ], 
+                "contact": "Stefano Ciavatta", 
+                "interval": "Monthly", 
+                "model": "POLCOMS-ERSEM", 
+                "niceName": "Nitrate", 
+                "region": "North East Atlantic"
+            }, 
+            "DIP": {
+                "Confidence": "Medium", 
+                "Ecosystem_Element": "Nutrient", 
+                "MSFD": [
+                    "Eutrophication"
+                ], 
+                "contact": "Stefano Ciavatta", 
+                "interval": "Monthly", 
+                "model": "POLCOMS-ERSEM", 
+                "niceName": "Phosphate", 
+                "region": "North East Atlantic"
+            }, 
+            "DISi": {
+                "Confidence": "Medium", 
+                "Ecosystem_Element": "Nutrient", 
+                "MSFD": [
+                    "Eutrophication"
+                ], 
+                "contact": "Stefano Ciavatta", 
+                "interval": "Monthly", 
+                "model": "POLCOMS-ERSEM", 
+                "niceName": "Silicate", 
+                "region": "North East Atlantic"
+            }, 
+            "N:P": {
+                "Confidence": "Medium", 
+                "Ecosystem_Element": "Nutrient", 
+                "MSFD": [
+                    "Eutrophication", 
+                    "Biological Diversity"
+                ], 
+                "contact": "Stefano Ciavatta", 
+                "interval": "Monthly", 
+                "model": "POLCOMS-ERSEM", 
+                "niceName": "Nitrate/Phosphate ratio", 
+                "region": "North East Atlantic"
+            }, 
+            "N:Si": {
+                "Confidence": "Medium", 
+                "Ecosystem_Element": "Nutrient", 
+                "MSFD": [
+                    "Eutrophication", 
+                    "Biological Diversity"
+                ], 
+                "contact": "Stefano Ciavatta", 
+                "interval": "Monthly", 
+                "model": "POLCOMS-ERSEM", 
+                "niceName": "Nitrate/Silicate ratio", 
+                "region": "North East Atlantic"
+            }
+        }, 
+        "name": "pml_monthly", 
+        "options": {
+            "positive": "down", 
+            "providerShortTag": "PML"
+        }, 
+        "services": {
+            "wcs": {
+                "params": {
+                    "DescribeCoverage": {
+                        "SERVICE": "WCS", 
+                        "request": "describeCoverage", 
+                        "version": "1.0.0"
+                    }
+                }, 
+                "url": "https://rsg.pml.ac.uk/thredds/wcs/PML_GEN_M?"
+            }, 
+            "wms": {
+                "params": {
+                    "GetCapabilities": {
+                        "SERVICE": "WMS", 
+                        "request": "GetCapabilities", 
+                        "version": "1.3.0"
+                    }
+                }, 
+                "url": "https://rsg.pml.ac.uk/thredds/wms/PML_GEN_M?"
+            }
+        }
+    }, 
+    {
+        "indicators": {
+            "Ammonia": {
+                "Confidence": "High", 
+                "Ecosystem_Element": "Nutrient", 
+                "contact": "Gianpiero Cossarini", 
+                "interval": "Monthly", 
+                "model": "OPATM-BFM-ECOPATH with ECOSIM", 
+                "niceName": "Ammonia", 
+                "region": "Mediterranean Sea"
+            }, 
+            "Nitrate": {
+                "Confidence": "High", 
+                "Ecosystem_Element": "Nutrient", 
+                "MSFD": [
+                    "Eutrophication"
+                ], 
+                "contact": "Gianpiero Cossarini", 
+                "interval": "Monthly", 
+                "model": "OPATM-BFM-ECOPATH with ECOSIM", 
+                "niceName": "Nitrate", 
+                "region": "Mediterranean Sea"
+            }, 
+            "Phosphate": {
+                "Confidence": "High", 
+                "Ecosystem_Element": "Nutrient", 
+                "MSFD": [
+                    "Eutrophication"
+                ], 
+                "contact": "Gianpiero Cossarini", 
+                "interval": "Monthly", 
+                "model": "OPATM-BFM-ECOPATH with ECOSIM", 
+                "niceName": "Phosphate", 
+                "region": "Mediterranean Sea"
+            }, 
+            "R_NO3_PHOS": {
+                "Confidence": "Medium", 
+                "Ecosystem_Element": "Nutrient", 
+                "contact": "Gianpiero Cossarini", 
+                "interval": "Monthly", 
+                "model": "OPATM-BFM-ECOPATH with ECOSIM", 
+                "niceName": "Nitrate/Phosphate ratio", 
+                "region": "Mediterranean Sea"
+            }, 
+            "R_NO3_SIO4": {
+                "Confidence": "Medium", 
+                "Ecosystem_Element": "Nutrient", 
+                "contact": "Gianpiero Cossarini", 
+                "interval": "Monthly", 
+                "model": "OPATM-BFM-ECOPATH with ECOSIM", 
+                "niceName": "Nitrate/Silicate ratio", 
+                "region": "Mediterranean Sea"
+            }, 
+            "Silicate": {
+                "Confidence": "High", 
+                "Ecosystem_Element": "Nutrient", 
+                "contact": "Gianpiero Cossarini", 
+                "interval": "Monthly", 
+                "model": "OPATM-BFM-ECOPATH with ECOSIM", 
+                "niceName": "Silicate", 
+                "region": "Mediterranean Sea"
+            }
+        }, 
+        "name": "ogs", 
+        "options": {
+            "positive": "down", 
+            "providerShortTag": "OGS"
+        }, 
+        "services": {
+            "wcs": {
+                "params": {
+                    "DescribeCoverage": {
+                        "SERVICE": "WCS", 
+                        "request": "describeCoverage", 
+                        "version": "1.0.0"
+                    }
+                }, 
+                "url": "https://rsg.pml.ac.uk/thredds/wcs/OGS-GEN?"
+            }, 
+            "wms": {
+                "params": {
+                    "GetCapabilities": {
+                        "SERVICE": "WMS", 
+                        "request": "GetCapabilities", 
+                        "version": "1.3.0"
+                    }
+                }, 
+                "url": "https://rsg.pml.ac.uk/thredds/wms/OGS-GEN?"
+            }
+        }
+    }, 
+    {
+        "indicators": {
+            "NO3": {
+                "Confidence": "Medium", 
+                "Ecosystem_Element": "Nutrient", 
+                "MSFD": [
+                    "Eutrophication", 
+                    "Biological Diversity"
+                ], 
+                "contact": "Baris Salihoglu", 
+                "interval": "Monthly", 
+                "model": "POM-BIMS_ECO", 
+                "niceName": "Nitrate", 
+                "region": "Black Sea"
+            }, 
+            "PO4": {
+                "Confidence": "Low", 
+                "Ecosystem_Element": "Nutrient", 
+                "MSFD": [
+                    "Eutrophication", 
+                    "Biological Diversity"
+                ], 
+                "contact": "Baris Salihoglu", 
+                "interval": "Monthly", 
+                "model": "POM-BIMS_ECO", 
+                "niceName": "Phosphate", 
+                "region": "Black Sea"
+            }
+        }, 
+        "name": "metu_monthly", 
+        "options": {
+            "positive": "down", 
+            "providerShortTag": "METU"
+        }, 
+        "services": {
+            "wcs": {
+                "params": {
+                    "DescribeCoverage": {
+                        "SERVICE": "WCS", 
+                        "request": "describeCoverage", 
+                        "version": "1.0.0"
+                    }
+                }, 
+                "url": "https://rsg.pml.ac.uk/thredds/wcs/IMSMETU_GEN_HC_M?"
+            }, 
+            "wms": {
+                "params": {
+                    "GetCapabilities": {
+                        "SERVICE": "WMS", 
+                        "request": "GetCapabilities", 
+                        "version": "1.3.0"
+                    }
+                }, 
+                "url": "https://rsg.pml.ac.uk/thredds/wms/IMSMETU_GEN_HC_M?"
+            }
+        }
+    }
+     
 
 ]

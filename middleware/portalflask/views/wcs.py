@@ -594,6 +594,8 @@ def basic(dataset, params, irregular=False, original=None):
             date = (netCDF.num2date(times[i], time.units, calendar='standard')).isoformat()
          except ValueError:
             date = ''.join(times[i])
+         except IndexError:
+            pass
       else:     
          date = ''.join(times[i])
       mean = getMean(row)
